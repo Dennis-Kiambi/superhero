@@ -1,0 +1,25 @@
+{{#partial "content"}}
+
+    <div class="row">
+        <div class="col-md-6">
+            {{#if squads}}
+                {{#each squads}}
+                    <p>{{squadName}}</p>
+                {{/each}}
+            {{/if}}
+        </div>
+        <div class="col-md-6">
+            {{#if heroes}}
+                {{#each heroes}}
+                    <p>{{heroName}}</p>
+                    <p><a href="/squads/{{squadId}}/heroes/{{id}}">{{description}}</a></p>
+                {{/each}}
+            {{else}}
+                <p>No heroes!</p>
+            {{/if}}
+        </div>
+    </div>
+
+{{/partial}}
+
+{{> layout.hbs}}
