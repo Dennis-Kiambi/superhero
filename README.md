@@ -1,10 +1,10 @@
-# ![Superheroes](https://dennis-kiambi.github.io/caesar-cipher/)
+# ![Superheroes](https://dennis-kiambi.github.io/superhero/)
 # Portfolio
 <table>
 <tr>
 <td>
 
-This is an app to substitute letters a certain number of places.
+App to create, add and manage superheroes..
 </td>
 </tr>
 </table>
@@ -13,25 +13,24 @@ This is an app to substitute letters a certain number of places.
 Dennis Kiambi
 
 ## Demo
-Here is a working live link :  https://dennis-kiambi.github.io/caesar-cipher/
+Here is a working live link :  https://dennis-kiambi.github.io/superhero/
 
 
 ## Site
-https://dennis-kiambi.github.io/caesar-cipher/
-
+https://dennis-kiambi.github.io/superhero/
 ### Landing Page
 
-![](https://dennis-kiambi.github.io/caesar-cipher/)
+![](https://dennis-kiambi.github.io/superhero/)
 
 ## Mobile support
 The website is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
 
-![](https://dennis-kiambi.github.io/caesar-cipher/)
+![](https://dennis-kiambi.github.io/superhero/)
 
 
 
 
-## [Usage](https://dennis-kiambi.github.io/caesar-cipher/) 
+## [Usage](https://dennis-kiambi.github.io/superhero/) 
 
 ### Development
 Want to contribute? Great!
@@ -48,9 +47,9 @@ To fix a bug or enhance an existing module, follow these steps:
 
 ### Bug / Feature Request
 
-If you find a bug, kindly open an issue [here](https://dennis-kiambi.github.io/caesar-cipher/) by including your search query and the expected result.
+If you find a bug, kindly open an issue [here](https://dennis-kiambi.github.io/superhero/) by including your search query and the expected result.
 
-If you'd like to request a new function, feel free to do so by opening an issue [here]https://dennis-kiambi.github.io/caesar-cipher//issues/new(). Please include sample queries and their corresponding results.
+If you'd like to request a new function, feel free to do so by opening an issue [here]https://dennis-kiambi.github.io/superhero/issues/new(). Please include sample queries and their corresponding results.
 
 
 ## Built with 
@@ -58,11 +57,11 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 - JAVA
 
 
-## [License](https://dennis-kiambi.github.io/caesar-cipher/blob/master/LICENSE.md)
+## [License](https://dennis-kiambi.github/superhero/blob/master/LICENSE.md)
 
 [MIT] © [Dennis Kiambi ]
 
 # Quote
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+This project was generated with [Java](https://www.java.com/en/) version 10.1.2.
 
