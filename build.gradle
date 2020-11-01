@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-group 'com.barakamulama.my-heroes'
+group 'com.moringa.superheroes'
 version '1.0-SNAPSHOT'
 
 mainClassName = 'App'
