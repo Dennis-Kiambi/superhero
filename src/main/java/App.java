@@ -23,6 +23,7 @@ public class App {
         }
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
+
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
@@ -79,6 +80,8 @@ public class App {
             model.put("heroes", heroDAO.getAllHeroes());
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
+    }
+}
 
 //
 //

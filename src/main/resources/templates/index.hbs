@@ -1,25 +1,32 @@
 {{#partial "content"}}
-
-    <div class="row">
-        <div class="col-md-6">
-            {{#if squads}}
-                {{#each squads}}
-                    <p>{{squadName}}</p>
-                {{/each}}
-            {{/if}}
-        </div>
-        <div class="col-md-6">
-            {{#if heroes}}
-                {{#each heroes}}
-                    <p>{{heroName}}</p>
-                    <p><a href="/squads/{{squadId}}/heroes/{{id}}"></a></p>
-                {{/each}}
-            {{else}}
-                <p>No heroes here!</p>
-            {{/if}}
+    <div class="data-image">
+    </div>
+    <div class="container" id="data">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    {{#if squads}}
+                        {{#each squads}}
+                            <p>{{squadName}}</p>
+                            <a href="/squads/{{id}}" class="btn btn-success">Information</a>
+                        {{/each}}
+                    {{/if}}
+                </div>
+                <div class="col-md-6">
+                    {{#if heroes}}
+                        {{#each heroes}}
+                            <p>{{heroName}}</p>
+                            <a href="/heroes/{{id}}" class="btn btn-success">Information</a>
+                        {{/each}}
+                    {{/if}}
+                </div>
+            </div>
         </div>
     </div>
-
 {{/partial}}
-
+<!--footer-->
+{{#partial "footer"}}
+    <footer>
+    </footer>
+{{/partial}}
 {{> layout.hbs}}

@@ -1,14 +1,15 @@
 {{#partial "content"}}
     <div class="data-image"></div>
-    <div class="container" id="data">
+    <div class="container">
         <div class="row">
-            <div class="col-md-6" id="data4">
+            <div class="col-md-6">
                 {{#if squad}}
-                    <div class="card text-white mb-3" id="data7">
+                    <div class="card text-white mb-3">
                         <div class="card-header">
                             <p>Squad's Name: {{squad.squadName}}</p>
                         </div>
-                        <div class="card-body mb-3" id="data8">
+
+                        <div class="card-body mb-3">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item" id="data8">Squad's cause: {{squad.squadPurpose}}</li>
                                 <li class="list-group-item" id="data8">Superheroes in squad: {{squad.squadNumber}}</li>
@@ -18,12 +19,13 @@
                     </div>
                 {{/if}}
 
-                <div id="data6">
+                <div>
                     <a href="/deletesquad/{{squad.id}}" class="btn btn-danger">Erase</a>
                     <a href="/editsquad/{{squad.id}}" class="btn btn-danger">Update</a>
                 </div>
             </div>
-            <div class="col-md-6" id="data5">
+
+            <div class="col-md-6">
                 {{#if heroes}}
                     {{#each heroes}}
                         <p>{{heroName}}</p>
@@ -33,6 +35,7 @@
             </div>
         </div>
     </div>
+
 {{/partial}}
 <!--footer-->
 {{#partial "footer"}}

@@ -1,23 +1,19 @@
-package modules;
+package models;
 
 public class Hero {
     private String heroName;
     private String heroPower;
     private String heroWeakness;
-    private String heroGender;
     private int heroAge;
     private int squadId;
     private int id;
-    /* the property attributes have to be private to avoid being accessed directly without getters and setters or modified, thus, reducing the pesky bugs. */
-    //squadId determines the hero's squad id and it will be useful in the interface
-    public Hero(String heroName, String heroPower, String heroWeakness, String heroGender, int heroAge, int squadId) {
+
+    public Hero(String heroName, String heroPower, String heroWeakness, int heroAge, int squadId) {
         this.heroName = heroName;
         this.heroPower = heroPower;
         this.heroWeakness = heroWeakness;
-        this.heroGender = heroGender;
         this.heroAge = heroAge;
         this.squadId = squadId;
-        // generate constructor argument. However, the id will not be generated since it will be generated and defined in the database
     }
 
     public String getHeroName() {
@@ -44,14 +40,6 @@ public class Hero {
         this.heroWeakness = heroWeakness;
     }
 
-    public String getHeroGender() {
-        return heroGender;
-    }
-
-    public void setHeroGender(String heroGender) {
-        this.heroGender = heroGender;
-    }
-
     public int getHeroAge() {
         return heroAge;
     }
@@ -76,6 +64,5 @@ public class Hero {
         this.id = id;
     }
 
-    //Generate setters and getters to access the private variables
 }
 

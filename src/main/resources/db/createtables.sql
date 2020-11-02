@@ -5,7 +5,7 @@ id int PRIMARY KEY auto_increment,
 heroName VARCHAR,
 heroPower VARCHAR,
 heroWeakness VARCHAR,
-heroGender VARCHAR,
+--heroGender VARCHAR,
 squadId INTEGER,
 heroAge INTEGER,
 );

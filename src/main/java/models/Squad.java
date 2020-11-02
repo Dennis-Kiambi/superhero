@@ -1,4 +1,4 @@
-package modules;
+package models;
 
 public class Squad {
     private String squadName;
@@ -6,7 +6,6 @@ public class Squad {
     private int squadNumber;
     private String squadGroup;
     private int id;
-    /* the property attributes have to be private to avoid being accessed directly without getters and setters or modified, thus, reducing the pesky bugs. */
 
     public Squad(String squadName, String squadPurpose, int squadNumber, String squadGroup) {
         this.squadName = squadName;
@@ -14,7 +13,6 @@ public class Squad {
         this.squadNumber = squadNumber;
         this.squadGroup = squadGroup;
     }
-    // generate constructor argument. However, the id will not be generated since it will be generated and defined in the database
 
     public String getSquadGroup() {
         return squadGroup;

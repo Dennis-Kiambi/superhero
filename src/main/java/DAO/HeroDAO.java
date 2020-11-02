@@ -5,16 +5,13 @@ import models.Hero;
 import java.util.List;
 
 public interface HeroDAO {
-
     List<Hero> getAllHeroes();
 
     void addHero(Hero hero);
 
-    Hero findByIdHero(int id);
+    Hero getHeroById(int id);
 
-    void updateHero(int id, String heroName, int squadId);
+    void deleteHeroById(int id);
 
-    void deleteById(int id);
-
-    void clearAllHeroes();
+    void updateHero(int id, String name, String power, String weakness, int age, int squadId);
 }
