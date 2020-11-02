@@ -1,8 +1,8 @@
 The Star And Thank Author License (SATA)
 
-Copyright (c) [Dennis Kiambi](https://dennis-kiambi.github.io/akan/)
+Copyright (c) [Dennis Kiambi](https://dennis-kiambi.github/superhero/)
 
-Project Url: https://dennis-kiambi.github.io/akan/
+Project Url: https://dennis-kiambi.github/superhero/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
