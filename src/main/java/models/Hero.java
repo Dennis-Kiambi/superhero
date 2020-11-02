@@ -1,45 +1,28 @@
-package models;
-
-import java.util.ArrayList;
+package modules;
 
 public class Hero {
-
-    private int id;
     private String heroName;
     private String heroPower;
     private String heroWeakness;
-    private int age;
+    private String heroGender;
+    private int heroAge;
     private int squadId;
-
-    public Hero(String heroName, String heroPower, String heroWeakness, int age, int squadId) {
+    private int id;
+    /* the property attributes have to be private to avoid being accessed directly without getters and setters or modified, thus, reducing the pesky bugs. */
+    //squadId determines the hero's squad id and it will be useful in the interface
+    public Hero(String heroName, String heroPower, String heroWeakness, String heroGender, int heroAge, int squadId) {
         this.heroName = heroName;
         this.heroPower = heroPower;
         this.heroWeakness = heroWeakness;
-        this.age = age;
+        this.heroGender = heroGender;
+        this.heroAge = heroAge;
         this.squadId = squadId;
+        // generate constructor argument. However, the id will not be generated since it will be generated and defined in the database
     }
 
-    public static void clearAllHeroes() {    }
-
-    public static Hero findByIdHero(int idOfHeroToDelete) {
-        return null;
+    public String getHeroName() {
+        return heroName;
     }
-
-    public static ArrayList<Hero> getAllHeroes() { return null;  }
-
-    public static Hero findById(int idOfHeroToFind) {  return null;  }
-
-    public static void add(Hero hero) {    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getHeroName() { return heroName;   }
 
     public void setHeroName(String heroName) {
         this.heroName = heroName;
@@ -61,12 +44,20 @@ public class Hero {
         this.heroWeakness = heroWeakness;
     }
 
-    public int getAge() {
-        return age;
+    public String getHeroGender() {
+        return heroGender;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setHeroGender(String heroGender) {
+        this.heroGender = heroGender;
+    }
+
+    public int getHeroAge() {
+        return heroAge;
+    }
+
+    public void setHeroAge(int heroAge) {
+        this.heroAge = heroAge;
     }
 
     public int getSquadId() {
@@ -77,9 +68,14 @@ public class Hero {
         this.squadId = squadId;
     }
 
-    public void deleteById(int id) { this.id = id; }
+    public int getId() {
+        return id;
+    }
 
-    public static void update(String newContent) {    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public void deleteById() {    }
+    //Generate setters and getters to access the private variables
 }
+
