@@ -2,68 +2,59 @@ package modules;
 
 import junit.framework.TestCase;
 import models.Hero;
+import org.junit.Assert;
 import org.junit.Test;
 
-public class HeroTest extends TestCase {
-    Hero shero = new Hero("Barry", "speed", "speed-force", "male", 20, 1);
+public class HeroTest {
+    private Hero hero = new Hero("Dude", "invisibility", "darkness", 2, 1);
 
     @Test
     public void testGetHeroName() {
-       assertEquals("Barry", shero.getHeroName());
+       Assert.assertEquals("Dude", hero.getHeroName());
     }
 
     @Test
     public void testSetHeroName() {
-        assertEquals("Barry", shero.getHeroName());
+        Assert.assertEquals("Dude", hero.getHeroName());
     }
 
     @Test
     public void testGetHeroPower() {
-        assertEquals("speed", shero.getHeroPower());
+        Assert.assertEquals("invisibility", hero.getHeroPower());
     }
 
     @Test
     public void testSetHeroPower() {
-        assertEquals("speed", shero.getHeroPower());
+        Assert.assertEquals("invisibility", hero.getHeroPower());
     }
 
     @Test
     public void testGetHeroWeakness() {
-        assertEquals("speed-force", shero.getHeroWeakness());
+        Assert.assertEquals("darkness", hero.getHeroWeakness());
     }
 
     @Test
     public void testSetHeroWeakness() {
-        assertEquals("speed-force", shero.getHeroWeakness());
-    }
-
-    @Test
-    public void testGetHeroGender() {
-        assertEquals("male", shero.getHeroGender());
-    }
-
-    @Test
-    public void testSetHeroGender() {
-        assertEquals("male", shero.getHeroGender());
+        Assert.assertEquals("darkness", hero.getHeroWeakness());
     }
 
     @Test
     public void testGetHeroAge() {
-        assertEquals(20, shero.getHeroAge());
+        Assert.assertEquals(2, hero.getHeroAge());
     }
 
     @Test
     public void testSetHeroAge() {
-        assertEquals(20, shero.getHeroAge());
+        Assert.assertEquals(2, hero.getHeroAge());
     }
 
     @Test
     public void testGetSquadId() {
-        assertEquals(1, shero.getSquadId());
+        Assert.assertEquals(1, hero.getSquadId());
     }
 
     @Test
     public void testSetSquadId() {
-        assertEquals(1, shero.getSquadId());
+        Assert.assertEquals(1, hero.getSquadId());
     }
 }

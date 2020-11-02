@@ -2,49 +2,50 @@ package modules;
 
 import junit.framework.TestCase;
 import models.Squad;
+import org.junit.Assert;
 import org.junit.Test;
 
-public class SquadTest extends TestCase {
+public class SquadTest {
 
-    Squad clique = new Squad("Flash", "fighting-crimes", 5, "DC");
+    Squad group = new Squad("avengers", "end bullying", 5, "boys club");
 
     @Test
     public void testGetSquadGroup() {
-        assertEquals("DC", clique.getSquadGroup());
+        Assert.assertEquals("boys club", group.getSquadGroup());
     }
 
     @Test
     public void testSetSquadGroup() {
-        assertEquals("DC", clique.getSquadGroup());
+        Assert.assertEquals("boys club", group.getSquadGroup());
     }
 
     @Test
     public void testGetSquadName() {
-        assertEquals("Flash", clique.getSquadName());
+        Assert.assertEquals("avengers", group.getSquadName());
     }
 
     @Test
     public void testSetSquadName() {
-        assertEquals("Flash", clique.getSquadName());
+        Assert.assertEquals("avengers", group.getSquadName());
     }
 
     @Test
     public void testGetSquadNumber() {
-        assertEquals(5, clique.getSquadNumber());
+        Assert.assertEquals(5, group.getSquadNumber());
     }
 
     @Test
     public void testSetSquadNumber() {
-        assertEquals(5, clique.getSquadNumber());
+        Assert.assertEquals(5, group.getSquadNumber());
     }
 
     @Test
     public void testGetSquadPurpose() {
-        assertEquals("fighting-crimes", clique.getSquadPurpose());
+        Assert.assertEquals("end bullying", group.getSquadPurpose());
     }
 
     @Test
     public void testSetSquadPurpose() {
-        assertEquals("fighting-crimes", clique.getSquadPurpose());
+        Assert.assertEquals("end bullying", group.getSquadPurpose());
     }
 }
