@@ -1,6 +1,8 @@
 {{#partial "content"}}
     {{#if hero}}
     <div class="container">
+        <div class="row">
+        <div class="col-md-12">
          <h5>Update or erase Super hero's info</h5>
              <div class="card text-center mb-3">
                  <div class="card-header">
@@ -23,6 +25,9 @@
              <a href="/edithero/{{hero.id}}" class="btn btn-outline-success">Update</a>
          </div>
          {{/if}}
+    </div>
+    </div>
+
 {{/partial}}
 <!--footer-->
 {{#partial "footer"}}
