@@ -12,13 +12,13 @@ public class Sql2oSquadDAO  implements  SquadDAO{
     private final Sql2o sql2o;
 
     public Sql2oSquadDAO(Sql2o sql2o) {
+
         this.sql2o = sql2o;
     }
-    //Override the method to implement the interface
+
     @Override
     public List<Squad> getAllSquads() {
         String sql = "SELECT * FROM squads";
-        /* error handling using try and catch */
         try(Connection con = sql2o.open()){
             return con.createQuery(sql)
                     .executeAndFetch(Squad.class);
@@ -35,13 +35,13 @@ public class Sql2oSquadDAO  implements  SquadDAO{
             con.createQuery(sql, false)
                     .bind(squad)
                     .executeUpdate();
-            /*int id = (int) con.createQuery(sql, false)
+            int id = (int) con.createQuery(sql, true)
                     .bind(squad)
                     .executeUpdate()
                     .getKey();
-            squad.setId(id);*/
+            squad.setId(id);
         }catch(Sql2oException ex){
-            System.out.println(ex.getMessage());
+            System.out.println(ex);
         }
     }
 

@@ -5,7 +5,6 @@ import models.Squad;
 import java.util.List;
 
 public interface SquadDAO {
-    //List
     List<Squad> getAllSquads();
     void addSquad(Squad squad);
     Squad getSquadById(int id);

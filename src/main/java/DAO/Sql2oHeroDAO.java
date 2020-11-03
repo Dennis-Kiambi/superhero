@@ -11,6 +11,7 @@ public class Sql2oHeroDAO implements HeroDAO{
     private final Sql2o sql2o;
 
     public Sql2oHeroDAO(Sql2o sql2o){
+
         this.sql2o = sql2o;
     }
 
@@ -28,16 +29,17 @@ public class Sql2oHeroDAO implements HeroDAO{
 
     @Override
     public void addHero(Hero hero) {
-     String sql = "INSERT INTO heroes (heroName, heroPower, heroWeakness, heroAge, squadId) VALUES (:heroName, :heroPower, :heroWeakness, :heroGender, :heroAge, :squadId)";
+     String sql = "INSERT INTO heroes (heroName, heroPower, heroWeakness, heroAge, squadId) VALUES (:heroName, :heroPower, :heroWeakness, :heroAge, :squadId)";
      try (Connection con = sql2o.open()){
         int id = (int) con.createQuery(sql, true)
-         .bind(hero)
+                 .bind(hero)
                  .executeUpdate()
                 .getKey();
         hero.setId(id);
      }catch(Sql2oException ex){
          System.out.println(ex);
      }
+
     }
 
     @Override
