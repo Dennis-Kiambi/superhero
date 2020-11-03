@@ -28,10 +28,10 @@ public class App {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
         staticFileLocation("/public");
-//        String connectionString = "jdbc:postgresql://localhost:5432/todolist"; //connect to todolist, not todolist_test!
-//        Sql2o sql2o = new Sql2o(connectionString, "postgres", "Tempott1");        Connection con;
-        String connectionString = "jdbc:postgresql://ec2-34-231-56-78.compute-1.amazonaws.com:5432/dd4tbspeggkt8u"; //!
-        Sql2o sql2o = new Sql2o(connectionString, "fbxwoczftbcplu", "5bd2f22417e768febf89383a55e82db9ee192aa216e7677998c972de46ef759d"); //!        Sql2o sql2o = new Sql2o(connectionString, "fbxwoczftbcplu", "5bd2f22417e768febf89383a55e82db9ee192aa216e7677998c972de46ef759d"); //!
+        String connectionString = "jdbc:postgresql://localhost:5432/heroes"; //connect to todolist, not todolist_test!
+        Sql2o sql2o = new Sql2o(connectionString, "postgres", "Tempott1");       // Connection con;
+//        String connectionString = "jdbc:postgresql://ec2-34-231-56-78.compute-1.amazonaws.com:5432/dd4tbspeggkt8u"; //!
+//        Sql2o sql2o = new Sql2o(connectionString, "fbxwoczftbcplu", "5bd2f22417e768febf89383a55e82db9ee192aa216e7677998c972de46ef759d"); //!        Sql2o sql2o = new Sql2o(connectionString, "fbxwoczftbcplu", "5bd2f22417e768febf89383a55e82db9ee192aa216e7677998c972de46ef759d"); //!
 
         Sql2oSquadDAO squadDAO = new Sql2oSquadDAO(sql2o);
         Sql2oHeroDAO heroDAO = new Sql2oHeroDAO(sql2o);
@@ -48,6 +48,13 @@ public class App {
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
+
+        get("/squads", (req, res) -> {
+//            Map<String, Object> model = new HashMap<>();
+            model.put("squads", squadDAO.getAllSquads());
+            return new ModelAndView(model, "index.hbs");
+        }, new HandlebarsTemplateEngine());
+
         get("/addsquad", (req, res) -> {
             return new ModelAndView(model, "form.hbs");
         }, new HandlebarsTemplateEngine());
@@ -55,7 +62,7 @@ public class App {
         post("/addsquad", (req, res) -> {
             String name = req.queryParams("name");
             String cause = req.queryParams("cause");
-            int size = Integer.parseInt(req.queryParams("size"));
+            int size = Integer.parseInt(req.queryParams("number"));
             String group = req.queryParams("group");
             Squad newSquad = new Squad(name, cause, size, group);
             squadDAO.addSquad(newSquad);
