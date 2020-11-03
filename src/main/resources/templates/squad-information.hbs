@@ -1,35 +1,36 @@
 {{#partial "content"}}
-    <div class="data-image"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 {{#if squad}}
-                    <div class="card text-white mb-3">
-                        <div class="card-header">
-                            <p>Squad's Name: {{squad.squadName}}</p>
-                        </div>
-
-                        <div class="card-body mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Squad's Name: {{squad.squadName}}</h5>
+                            <p class="card-text">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item" id="data8">Squad's cause: {{squad.squadPurpose}}</li>
-                                <li class="list-group-item" id="data8">Superheroes in squad: {{squad.squadNumber}}</li>
-                                <li class="list-group-item" id="data8">Squad's Group: {{squad.squadGroup}}</li>
-                            </ul>
+                            <li class="list-group-item" id="data8">Squad's cause: {{squad.squadPurpose}}</li>
+                            <li class="list-group-item" id="data8">Superheroes in squad: {{squad.squadNumber}}</li>
+                            <li class="list-group-item" id="data8">Squad's Group: {{squad.squadGroup}}</li>
+                        </ul>
+                            <div>
+                                <a href="/deletesquad/{{squad.id}}" class="btn btn-outline-danger">Erase</a>
+                                <a href="/editsquad/{{squad.id}}" class="btn btn-outline-success">Update</a>
+                            </div>
                         </div>
                     </div>
                 {{/if}}
-
-                <div>
-                    <a href="/deletesquad/{{squad.id}}" class="btn btn-danger">Erase</a>
-                    <a href="/editsquad/{{squad.id}}" class="btn btn-danger">Update</a>
-                </div>
             </div>
 
             <div class="col-md-6">
                 {{#if heroes}}
                     {{#each heroes}}
-                        <p>{{heroName}}</p>
-                        <a href="/heroes/{{id}}" class="btn btn-info">Details</a>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Hero's name: {{heroName}}</h5>
+<!--                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                            <a href="/heroes" class="btn btn-outline-info">More >></a>
+                        </div>
+                    </div>
                     {{/each}}
                 {{/if}}
             </div>

@@ -1,18 +1,16 @@
 {{#partial "content"}}
     {{#if hero}}
-        <div class="data-image"></div>
     <div class="container">
-     <div class="container">
-             <div class="card text-white text-center mb-3">
+         <h5>Update or erase Super hero's info</h5>
+             <div class="card text-center mb-3">
                  <div class="card-header">
                      <p>Hero's Name: {{hero.heroName}}</p>
                  </div>
                  <div class="card-body mb-3">
                      <ul class="list-group list-group-flush">
-                         <li class="list-group-item" id="data8">Hero's Power: {{hero.heroPower}}</li>
-                         <li class="list-group-item" id="data8">Hero's Weakness: {{hero.heroWeakness}}</li>
-                         <li class="list-group-item" id="data8">Hero's Gender: {{hero.heroGender}}</li>
-                         <li class="list-group-item" id="data8">Hero's Age: {{hero.heroAge}}</li>
+                         <li class="list-group-item">Hero's Power: {{hero.heroPower}}</li>
+                         <li class="list-group-item">Hero's Weakness: {{hero.heroWeakness}}</li>
+                         <li class="list-group-item">Hero's Age: {{hero.heroAge}}</li>
                          {{#if squad}}
                              <li class="list-group-item">Squad's Name: {{squad.squadName}}</li>
                          {{/if}}
@@ -21,11 +19,10 @@
              </div>
          </div>
          <div>
-             <a href="/deletehero/{{hero.id}}" class="btn btn-danger">Remove</a>
-             <a href="/edithero/{{hero.id}}" class="btn btn-danger">Update</a>
+             <a href="/deletehero/{{hero.id}}" class="btn btn-outline-danger">Erase hero</a>
+             <a href="/edithero/{{hero.id}}" class="btn btn-outline-success">Update</a>
          </div>
-     </div>
-    {{/if}}
+         {{/if}}
 {{/partial}}
 <!--footer-->
 {{#partial "footer"}}
