@@ -1,0 +1,37 @@
+{{#partial "content"}}
+    {{#if hero}}
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+         <h5>Update or erase Super hero's info</h5>
+             <div class="card text-center mb-3">
+                 <div class="card-header">
+                     <p>Hero's Name: {{hero.heroName}}</p>
+                 </div>
+                 <div class="card-body mb-3">
+                     <ul class="list-group list-group-flush">
+                         <li class="list-group-item">Hero's Power: {{hero.heroPower}}</li>
+                         <li class="list-group-item">Hero's Weakness: {{hero.heroWeakness}}</li>
+                         <li class="list-group-item">Hero's Age: {{hero.heroAge}}</li>
+                         {{#if squad}}
+                             <li class="list-group-item">Squad's Name: {{squad.squadName}}</li>
+                         {{/if}}
+                     </ul>
+                 </div>
+             </div>
+         </div>
+         <div>
+             <a href="/deletehero/{{hero.id}}" class="btn btn-outline-danger">Erase hero</a>
+             <a href="/edithero/{{hero.id}}" class="btn btn-outline-success">Update</a>
+         </div>
+         {{/if}}
+    </div>
+    </div>
+
+{{/partial}}
+<!--footer-->
+{{#partial "footer"}}
+    <footer>
+    </footer>
+{{/partial}}
+{{> layout.hbs}}

@@ -27,15 +27,13 @@ public class App {
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
-//        String connectionString = "jdbc:postgresql://localhost:5432/heroes"; //connect to heroes, not heroes_test!
-//        Sql2o sql2o = new Sql2o(connectionString, "postgres", "Tempott1");       // Connection con;
-//        String connectionString = "jdbc:postgresql://ec2-34-231-56-78.compute-1.amazonaws.com:5432/dd4tbspeggkt8u"; //!
-//        Sql2o sql2o = new Sql2o(connectionString, "fbxwoczftbcplu", "5bd2f22417e768febf89383a55e82db9ee192aa216e7677998c972de46ef759d"); //!        Sql2o sql2o = new Sql2o(connectionString, "fbxwoczftbcplu", "5bd2f22417e768febf89383a55e82db9ee192aa216e7677998c972de46ef759d"); //!
+        String connectionString = "jdbc:postgresql://kpgzslcfjuufhs:fc3925d3712320d24fdb72877c85120e3b005f92467a8ea72e9193e6654bc351@ec2-34-192-173-173.compute-1.amazonaws.com:5432/d399n6nlr1i3qo";
+        Sql2o sql2o = new Sql2o(connectionString, "kpgzslcfjuufhs", "fc3925d3712320d24fdb72877c85120e3b005f92467a8ea72e9193e6654bc351"); //!        Sql2o sql2o = new Sql2o(connectionString, "fbxwoczftbcplu", "5bd2f22417e768febf89383a55e82db9ee192aa216e7677998c972de46ef759d"); //!
 
 
-        String connectionString = "jdbc:h2:~/heroes.db;INIT=RUNSCRIPT from 'classpath:db/createtables.sql'";
-       // Connection con;
-        Sql2o sql2o = new Sql2o(connectionString, "postgres", "Tempott1");
+//        String connectionString = "jdbc:h2:~/heroes.db;INIT=RUNSCRIPT from 'classpath:db/createtables.sql'";
+//       // Connection con;
+//        Sql2o sql2o = new Sql2o(connectionString, "postgres", "Tempott1");
 
 
         Sql2oSquadDAO squadDAO = new Sql2oSquadDAO(sql2o);

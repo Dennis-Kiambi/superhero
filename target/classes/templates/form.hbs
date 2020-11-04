@@ -1,0 +1,28 @@
+
+{{#partial "content"}}
+    <div class="container">
+        <h5>Add a Squad</h5>
+        <form method="Post" action="/addsquad">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Squad Name">
+            </div>
+            <div class="form-group">
+                <label for="cause">Cause</label>
+                <input type="text" class="form-control" id="cause" name="cause" placeholder="Squad's cause">
+            </div>
+            <div class="form-group">
+                <label for="number">Number</label>
+                <input type="number" class="form-control" id="number" name="number" placeholder="Heroes in squad">
+            </div>
+            <div class="form-group">
+                <label for="category">Group</label>
+                <input type="text" class="form-control" id="category" name="category" placeholder="Squad's Category">
+            <button type="submit" class="btn btn-outline-success" id="data3">Submit</button>
+            </div>
+        </form>
+{{/partial}}
+<!--footer-->
+{{#partial "footer"}}
+{{/partial}}
+{{> layout.hbs}}

@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-<!--    <groupId>com.mycompany.app</groupId>-->
-<!--    <artifactId>my-app</artifactId>-->
-<!--    <version>1.0</version>-->
-    <groupId>com.heroku.sdk</groupId>
-    <artifactId>heroku-maven-plugin</artifactId>
-    <version>3.0.3</version>
+    <groupId>com.mycompany.app</groupId>
+    <artifactId>my-app</artifactId>
+    <version>1.0</version>
+<!--    <groupId>com.heroku.sdk</groupId>-->
+<!--    <artifactId>heroku-maven-plugin</artifactId>-->
+<!--    <version>3.0.3</version>-->
 
     <dependencies>
         <!-- We need to list out ALL dependencies our project needs. If you have dependencies not listed here, but sure to add them -->
@@ -74,7 +74,7 @@
                 <configuration>
                     <jdkVersion>1.8</jdkVersion>
                     <!-- Change this to YOUR application name! -->
-                    <appName>hero-ip</appName>
+                    <appName>hero-ipp</appName>
                     <processTypes>
                         <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
                     </processTypes>
